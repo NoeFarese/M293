@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+  }  
+h1{
+    background-color: #DCDCDC;
+    text-align: center;
+    font-size: 22px;
+}
+h2{
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.kostenloserVersand{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 200;
+    color: #777;
+    margin-bottom: 20px;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+h3{
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+li{
+    list-style: square;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+button{
+    background-color:#000;
+    border:none;
+    color:#fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border-top: #000 solid 4px;
+}
+button:hover:active{
+    background-color:#fff;
+    color: #000;
+}
+article{
+    border: black solid 4px;
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+body{
+    font-family: sans-serif;
+    line-height: 1.4;
+    
+}
+.farbenauswahl{
+    height: 22px;
+    width: 22px;
+    margin-right: 10px;
+
+}
+.black{
+    background-color:#000;
+}
+.blue{
+    background-color: #2f6ee2;
+}
+.red{
+    background-color: #ec3f2f
+}
+.yellow{
+    background-color: #f0bf1e
+}
+.green{
+    background-color: #90cc20
+}
+.brown{
+    background-color: #885214
+}
+.farbenauswahlContainer{
+    display: flex;
+    margin-top: 20px;
+}
+.action {  
+    background-color: #ec2f2f; 
+    color: #fff; 
+    font-size: 12px;  
+    text-transform: uppercase;  
+    font-weight: bolder;  letter-spacing: 2px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-flex;
+    position: absolute;
+    left: -38px;
+    top: -17px;
+     
+    }
+
+
+.liste {
+    list-style-type: square;
+    margin-left: 20px;
+}
+    
+.listen-element {
+    margin-bottom: 10px;
+}    
+
+.productdetailstitel{
+    text-transform: uppercase;
+}
+
+.text{
+    margin-bottom: 20px;
+}
