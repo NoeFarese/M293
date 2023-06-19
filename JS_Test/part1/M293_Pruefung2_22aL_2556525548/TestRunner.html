@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>QUnit-Beispiel</title>
+    <link rel="stylesheet" href="style/qunit/qunit.css" />
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture">
+      <ul>
+        <script>
+          /*
+          Aufgabe 8: (3 Punkte)
+          Erzeugen Sie mit einer Klasse ein Objekt, das ein Auto repräsentiert.
+          Das Auto soll folgende Eigenschaften haben: Marke, Baureihe, Farbe, Aktuelle_Geschwindigkeit.
+          Das Auto soll folgende Objektmethode haben: Beschleunigen(wert).
+          Die Objektmethode Beschleunigen(wert) soll die Eigenschaft Aktuelle_Geschwindigkeit um den Wert wert erhöhen.
+           */
+          "use strict";
+          // TODO: Klasse Auto
+          class Auto {
+            constructor(marke, baureihe, farbe, aktuelleGeschwindigkeit) {
+              this.marke = marke;
+              this.baureihe = baureihe;
+              this.farbe = farbe;
+              this.aktuelleGeschwindigkeit = aktuelleGeschwindigkeit;
+            }
+
+            beschleunigen(wert) {
+              this.aktuelleGeschwindigkeit += wert;
+            }
+          }
+
+          /*
+          Aufgabe 9: (3 Punkte)
+          Erzeugen Sie ein Objekt vom Typ Auto mit den Werten: Marke: VW, Baureihe: Passat, Farbe: rot, Aktuelle_Geschwindigkeit: 85.
+          Geben Sie die Eigenschaften des Objekts als List-Item-Element <li> mit einer Schleife, im Browser, aus.
+          */
+          // TODO: Objekt Auto1
+          const meinAuto = new Auto("VW", "Passat", "rot", 85);
+          const autoEigenschaften = Object.entries(meinAuto);
+          const liste = document.createElement("ul");
+
+          autoEigenschaften.forEach(([eigenschaft, wert]) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${eigenschaft}: ${wert}`;
+            liste.appendChild(listItem);
+          });
+
+          document.body.appendChild(liste);
+
+          /*
+          Aufgabe 10: (3 Punkte)
+          Rufen Sie die Objektmethode Beschleunigen(wert) mit dem Wert 25 auf.
+          Geben Sie die Eigenschaften des Objekts erneut als List-Item-Element <li> mit einer Schleife, im Browser, aus.
+           */
+          // TODO: Beschleunigen Auto 1
+          meinAuto.beschleunigen(25);
+
+          const updatedAutoEigenschaften = Object.entries(meinAuto);
+          const updatedListe = document.createElement("ul");
+
+          updatedAutoEigenschaften.forEach(([eigenschaft, wert]) => {
+            const updatedListItem = document.createElement("li");
+            updatedListItem.textContent = `${eigenschaft}: ${wert}`;
+            updatedListe.appendChild(updatedListItem);
+          });
+
+          document.body.appendChild(updatedListe);
+        </script>
+      </ul>
+    </div>
+    <script src="js/lib/qunit/qunit.js"></script>
+    <script src="js/src/Pruefungsfragen.js"></script>
+    <script src="js/test/PruefungsfragenTest.js"></script>
+  </body>
+</html>
